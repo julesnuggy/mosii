@@ -1,6 +1,6 @@
 package com.boardgame.mosii.entities;
 
-import com.boardgame.mosii.enums.Roles;
+import com.boardgame.mosii.enums.RoleType;
 import com.sun.istack.NotNull;
 
 import javax.persistence.Entity;
@@ -14,7 +14,8 @@ public class Role {
     @GeneratedValue
     UUID uid;
 
-    Roles role;
+    @NotNull
+    RoleType roleType;
 
     @NotNull
     Integer start_coord_x;

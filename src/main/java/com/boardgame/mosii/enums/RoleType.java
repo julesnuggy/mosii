@@ -1,5 +1,5 @@
 package com.boardgame.mosii.enums;
 
-public enum Role {
+public enum RoleType {
     GUDIN, ZONGII, SEONITES, JZAN
 }
