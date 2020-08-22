@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  postgres:
+    container_name: mosii
+    image: postgres:11.5
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+    ports:
+      - "5432:5432"
+    command: postgres -N 500
