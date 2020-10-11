@@ -23,5 +23,6 @@ public class Character {
     Integer level;
 
     @NotNull
+    @Enumerated(EnumType.STRING)
     Pronoun pronoun;
 }
