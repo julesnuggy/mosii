@@ -17,11 +17,11 @@ public class Role {
     @Enumerated(EnumType.STRING)
     RoleType roleType;
 
-    @NotNull
-    Integer start_coord_x;
+    public Role() { }
 
-    @NotNull
-    Integer start_coord_y;
+    public Role(RoleType roleType) {
+        this.roleType = roleType;
+    }
 
     public UUID getUid() {
         return uid;
@@ -29,13 +29,5 @@ public class Role {
 
     public RoleType getRoleType() {
         return roleType;
-    }
-
-    public Integer getStart_coord_x() {
-        return start_coord_x;
-    }
-
-    public Integer getStart_coord_y() {
-        return start_coord_y;
     }
 }

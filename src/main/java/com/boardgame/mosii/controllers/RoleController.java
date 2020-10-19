@@ -3,9 +3,7 @@ package com.boardgame.mosii.controllers;
 import com.boardgame.mosii.entities.Role;
 import com.boardgame.mosii.services.RoleService;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,5 +19,13 @@ public class RoleController {
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Role> getRoles() {
         return this.roleService.getRoles();
+    }
+
+    @PostMapping(
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public Role createRole(@RequestBody Role role) {
+        return this.roleService.createRole(role);
     }
 }

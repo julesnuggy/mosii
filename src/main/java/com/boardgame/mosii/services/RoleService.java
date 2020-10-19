@@ -19,4 +19,9 @@ public class RoleService {
     public List<Role> getRoles() {
         return this.roleRepository.findAll();
     }
+
+    public Role createRole(Role role) {
+        Role newRole = new Role(role.getRoleType());
+        return this.roleRepository.save(newRole);
+    }
 }

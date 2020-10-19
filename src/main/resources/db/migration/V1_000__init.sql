@@ -1,13 +1,11 @@
 create table if not exists mosii.role (
-    uid             uuid            not null
+    uid         uuid            not null
         constraint role_pkey primary key,
-    role_type       varchar(255)    not null,
-    start_coord_x   int             not null default 0,
-    start_coord_y   int             not null default 0
+    role_type   varchar(255)    not null
 );
 
 create table if not exists mosii.character (
-    uid     uuid            not null
+    uid         uuid            not null
         constraint character_pkey primary key,
     name        varchar(255)    not null,
     role_uid    uuid            not null,
