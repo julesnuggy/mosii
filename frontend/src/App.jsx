@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
+import Home from './screens/Home';
+import styles from './App.module.scss';
 
 const App = () => (
-  <div className="App">
-    <h1>Mosii</h1>
-    <h2>A Strategy RPG Boardgame App</h2>
+  <div className={styles.App}>
+    <Home />
   </div>
 );
 

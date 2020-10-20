@@ -12,6 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js'
   },
+  resolve: { extensions: ["*", ".js", ".jsx"] },
   module: {
     rules: [
       {
@@ -29,10 +30,11 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
+        test: /\.(css|scss)$/,
         use: [
           'style-loader',
-          'css-loader'
+          'css-loader',
+          'sass-loader'
         ]
       }
     ]
@@ -46,5 +48,8 @@ module.exports = {
     contentBase: path.join(__dirname, 'public/'),
     port: 3000,
     publicPath: 'http://localhost:3000/',
+  },
+  watchOptions: {
+    poll: true
   }
 }
