@@ -1,0 +1,62 @@
+.option {
+  position: absolute;
+  font-size: 50px;
+  border: solid 1px white;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #040487;
+    -webkit-transition: background-color 0.5s linear;
+    -ms-transition: background-color 0.5s linear;
+    transition: background-color 0.5s linear;
+  }
+
+  p {
+    margin: 0;
+    padding-top: 40%;
+  }
+
+  &__small {
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
+  }
+
+  &__medium {
+    font-size: 35px;
+    width: 200px;
+    height: 200px;
+  }
+
+  &__large {
+    width: 300px;
+    height: 300px;
+  }
+
+  &.newGame {
+    left: 35%;
+    top: 65%;
+  }
+
+  &.continue {
+    left: 70%;
+    top: 50%;
+  }
+
+  &.options {
+    left: 80%;
+    top: 20%;
+  }
+
+  &.howToPlay {
+    left: 40%;
+    top: 10%;
+  }
+
+  &.credits {
+    left: 20%;
+    top: 40%;
+  }
+}

@@ -1,15 +1,17 @@
 .homeContainer {
-  width: calc(100vw - 80px);
-  height: calc(100vh - 80px);
-  padding: 40px;
+  width: 100vw;
+  height: 100vh;
   background-color: black;
   color: white;
 
-  .title {
-    font-size: 80px;
-  }
+  .background {
+    padding: 40px;
 
-  .option {
-    font-size: 50px;
+    .title {
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      font-size: 80px;
+    }
   }
 }
