@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import classNames from 'classnames'
 import styles from './MenuOption.module.scss'
 
-export default ({ name, className, size = 'medium' }) => {
+export default ({ name, className, size = 'medium', linkTo }) => {
   const getSizeClass = () => {
     return {
       [styles.option__large]: size === 'large',
@@ -12,14 +13,18 @@ export default ({ name, className, size = 'medium' }) => {
   }
 
   return (
-    <div
-      className={classNames(
-        styles.option,
-        `${styles[className]}`,
-        getSizeClass()
-      )}
-    >
-      <p>{name}</p>
-    </div>
+    <Link to={linkTo} className={styles.menuLink}>
+        <div
+        className={classNames(
+          styles.option,
+          `${styles[className]}`,
+          getSizeClass()
+        )}
+      >
+        <div className={styles.optionText}>
+            {name}
+        </div>
+      </div>
+    </Link>
   )
 }
