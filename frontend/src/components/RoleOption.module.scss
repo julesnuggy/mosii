@@ -1,0 +1,26 @@
+.container {
+  margin: 0 3rem;
+
+  .roleName {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .roleControl {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+    .roleImageContainer {
+      display: flex;
+      flex-direction: column;
+
+      .roleImage {
+        width: 100%;
+      }
+
+      input {
+      }
+    }
+  }
+}
