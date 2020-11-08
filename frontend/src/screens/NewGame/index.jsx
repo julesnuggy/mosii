@@ -1,9 +1,10 @@
 import React from 'react';
+import Setup from './Setup';
 
 export const NewGame = () => {
   return (
     <div>
-      <h1>New Game</h1>
+      <Setup />
     </div>
   );
 }
